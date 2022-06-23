@@ -6,17 +6,13 @@
 #define _bufsize 4096
 #define seq_size 1024
 #define add_seq_size 512
+int a;
 
 typedef struct _ks_string{
     int cur_size;
     char *s;
 }ks_string;
 
-typedef struct _kstream{
-    char *buf;
-    int begin,end,is_eof;
-    gzFile f;
-}kstream;
 
 typedef struct _kseq{
     ks_string name,comments,seq,qual;
